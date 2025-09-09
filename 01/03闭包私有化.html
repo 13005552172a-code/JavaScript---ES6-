@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>刷新</button>
+    <script>
+      // 数据私有化---闭包
+      function fu() {
+        let i = 0;
+        function su() {
+          i++;
+          console.log(`刷新了页面` + i + `次`);
+        }
+        return su;
+      }
+      const fun = fu();
+      const btn = document.querySelector(`button`);
+      btn.addEventListener(`click`, function () {
+        fun();
+      });
+    </script>
+  </body>
+</html>
