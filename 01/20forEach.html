@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const arr = [`blue`, `red`, `yellow`, `green`];
+      // 适合遍历数组对象
+      const a = arr.forEach(function (item, index) {
+        // 遍历，不返回数组
+        console.log(item);
+        console.log(index);
+      });
+      console.log(a); //undefined
+    </script>
+  </body>
+</html>

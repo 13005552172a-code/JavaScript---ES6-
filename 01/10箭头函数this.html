@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 之前的 -->
+    <script>
+      // console.log(this);
+      // function fn() {
+      //   console.log(this);
+      // }
+      // fn();
+      // const obj = {
+      //   uanme: `gwq`,
+      //   sty: function () {
+      //     console.log(this);
+      //   },
+      // };
+      // obj.sty();
+
+      // 箭头函数this,指向上一层
+      // 指向window
+      // const obj = {
+      //   uname: `gwq`,
+      //   sty: () => {
+      //     console.log(this);
+      //   },
+      // };
+      // obj.sty();
+
+      const sb = {
+        uname: `unames`,
+        sty: function () {
+          let i = 10;
+          const count = () => {
+            console.log(this);
+          };
+          count();
+        },
+      };
+      sb.sty();
+    </script>
+  </body>
+</html>

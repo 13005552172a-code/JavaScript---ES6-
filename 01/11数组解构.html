@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 把数组值赋值到变量 -->
+    <script>
+      // const [max, mix, min] = [1, 2, 3];
+      // console.log(max, mix, min); // 1 2 3
+      const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      const [first, second, ...rest] = arr;
+      console.log(first, second, ...rest); // 1 2 3 4 5 6 7 8 9
+    </script>
+  </body>
+</html>

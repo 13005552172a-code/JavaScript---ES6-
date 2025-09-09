@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const fn = () => {
+        console.log(123);
+      };
+      fn();
+      // 只有一个形参 可以去掉小括号
+      const sb = (a) => {
+        console.log(a);
+      };
+      sb(`只有一个参数`);
+      // 只有一个语句 可以去掉大括号, 语句前面不需要写return
+      const fs = (a) => console.log(a);
+      fs(`只有一个语句`);
+      // 箭头函数可以直接返回一个对象
+      const obj = (uname) => ({ name: uname });
+      console.log(obj(`张三`));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 解构对象
+      // const uname = `gwq`;
+      // const { uname: username, age } = { uname: `zhangsan`, age: 18 };
+      // console.log(username);
+      // console.log(age);
+
+      // 解构数组对象
+      const pig = [
+        {
+          name: "佩奇",
+          age: 3,
+        },
+      ];
+      const [{ name, age }] = pig;
+      console.log(name);
+      console.log(age);
+    </script>
+  </body>
+</html>

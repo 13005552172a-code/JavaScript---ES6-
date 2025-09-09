@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const pig = {
+        name: "佩奇",
+        age: 3,
+        friend: [
+          {
+            name: "苏西",
+            age: 4,
+          },
+          {
+            name: "小羊",
+            age: 3,
+          },
+          {
+            name: "兔子",
+            age: 4,
+          },
+          {
+            name: "狗狗",
+            age: 5,
+          },
+        ],
+      };
+      // { friend }这个参数 已经解构了
+      function getFriend({ friend }) {
+        console.log(friend);
+      }
+      getFriend(pig);
+    </script>
+  </body>
+</html>

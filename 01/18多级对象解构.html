@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const pig = {
+        name: "佩奇",
+        friend: {
+          father: "pig father",
+          mother: "pig mother",
+          sister: "pig sister",
+        },
+      };
+      const {
+        name,
+        friend: { father, mother, sister },
+      } = pig;
+      console.log(name);
+      console.log(father);
+      console.log(mother);
+      console.log(sister);
+    </script>
+  </body>
+</html>

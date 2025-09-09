@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 参数过多
+      // const [a, b, c, d] = [1, 2, 3, 4, 5, 6, 7, 8, 9]; // 只取前四个
+      // console.log(a);
+      // console.log(b);
+      // console.log(c);
+      // console.log(d);
+
+      // 参数过少
+      // const [a, b, c, d] = [1, 2]; // 只取前两个
+      // console.log(a);
+      // console.log(b);
+      // console.log(c); //underfined
+      // console.log(d);//underfined
+
+      // const [a, b, c, d, ...arr] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      // console.log(a);
+      // console.log(b);
+      // console.log(c);
+      // console.log(d);
+      // console.log(arr);//返回数组
+
+      // 多维数组解析
+      const [a, b, [c, d]] = [1, 2, [3, 4]];
+      console.log(a);
+      console.log(b);
+      console.log(c);
+      console.log(d);
+    </script>
+  </body>
+</html>
