@@ -132,11 +132,13 @@
       // 遍历数组
       goodsList.forEach((item) => {
         // console.log(item);
+        // 对象解构
+        const { picture, id, price } = item;
         str += `
         <div class="item">
-        <img src="${item.picture}" alt="" />
-        <p class="name">${item.id}</p>
-        <p class="price">${item.price}</p>
+        <img src="${picture}" alt="" />
+        <p class="name">${id}</p>
+        <p class="price">${price}</p>
       </div>
         `;
       });
