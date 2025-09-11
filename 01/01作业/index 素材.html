@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>英雄</title>
+    <link rel="stylesheet" href="./css/hero.css" />
+    <link rel="stylesheet" href="./css/comm-v1.css" />
+    <style>
+      /* .ms-radio .i:active,
+      .ms-radio .i:hover {
+        background: #05943c;
+      } */
+    </style>
+  </head>
+
+  <body>
+    <div class="herolist-box">
+      <div class="clearfix herolist-types">
+        <ul class="types-left">
+          <li>综合</li>
+          <li>定位</li>
+        </ul>
+        <ul class="clearfix types-ms" id="payType">
+          <li data-ptype="10">
+            <span class="ms-radio"><i class="i"></i></span>
+            <label>本周免费</label>
+          </li>
+          <li data-ptype="11">
+            <span class="ms-radio"><i class="i"></i></span>
+            <label>新手推荐</label>
+          </li>
+        </ul>
+        <ul class="clearfix types-ms" id="heroType">
+          <li class="current" data-type="0">
+            <span class="ms-radio"><i class="i"></i></span>
+            <label>全部</label>
+          </li>
+          <li data-type="3">
+            <span class="ms-radio"><i class="i"></i></span>
+            <label>坦克</label>
+          </li>
+          <li data-type="1">
+            <span class="ms-radio"><i class="i"></i></span>
+            <label>战士</label>
+          </li>
+          <li data-type="4">
+            <span class="ms-radio"><i class="i"></i></span>
+            <label>刺客</label>
+          </li>
+          <li data-type="2">
+            <span class="ms-radio"><i class="i"></i></span>
+            <label>法师</label>
+          </li>
+          <li data-type="5">
+            <span class="ms-radio"><i class="i"></i></span>
+            <label>射手</label>
+          </li>
+          <li data-type="6">
+            <span class="ms-radio"><i class="i"></i></span>
+            <label>辅助</label>
+          </li>
+        </ul>
+      </div>
+      <div class="herolist-content">
+        <ul class="herolist clearfix">
+          <!-- <li >
+          <a href="#" target="_blank"><img src="" width="91" height="91" alt="曜" />曜</a>
+        </li> -->
+        </ul>
+      </div>
+    </div>
+
+    <!-- 数组比较多，放在了外接的js文件中 -->
+    <script src="./hero.js"></script>
+    <script>
+      // 首先 我得先把全部遍历出来
+      function heros(heroArr) {
+        let str = ``;
+        for (let i = 0; i < heroArr.length; i++) {
+          const { icon, name, pay_type, hero_type } = heroArr[i];
+          str += `
+          <li data-pay-type="${pay_type}" data-hero-type="${hero_type}"">
+          <a href="#" target="_blank"><img src="${icon}" width="91" height="91" alt="${name}" />${name}</a>
+        </li>
+          `;
+        }
+        document.querySelector(`.herolist.clearfix`).innerHTML = str;
+      }
+      heros(heroArr);
+      // 按钮切换
+      // 获取元素
+      const lis = document.querySelectorAll(`.types-ms>li`);
+      lis.forEach((item) => {
+        item.addEventListener(`click`, function () {
+          // 去除全部样式
+          document.querySelector(`li.current`).classList.remove(`current`);
+          // 给当前添加样式
+          this.classList.add(`current`);
+        });
+      });
+      let arr = heroArr;
+      arr = heroArr.filter(
+        (ele) =>
+          ele.pay_type === +this.dataset.ptype ||
+          ele.hero_type === +this.dataset.type
+      );
+      render(arr);
+    </script>
+  </body>
+</html>
