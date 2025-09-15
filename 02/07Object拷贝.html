@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Object.assign(as, obj);//as:拷贝者，obj：被拷贝者
+      // const obj = {
+      //   name: `xuezhiqian`,
+      //   age: 18,
+      //   sayhello: function () {
+      //     console.log(`hello`);
+      //   },
+      // };
+      // const as = {};
+      // Object.assign(as, obj);
+      // console.log(as);
+
+      // function fn(name, age, xw) {
+      //   this.name = name;
+      //   this.age = age;
+      //   this.xw = xw;
+      // }
+      // const a = new fn(`zhoujielun`, 48, `music`);
+      // fn.saygoodbye = function () {
+      //   console.log(`goodbye my friend`);
+      // };
+      // console.log(a);
+      // fn.saygoodbye();
+      // console.log(fn);
+
+      // 添加属性
+      const a = {
+        name: `张三`,
+        age: 18,
+      };
+      const c = Object.assign(a, { xb: `man` });
+      console.log(a);
+    </script>
+  </body>
+</html>

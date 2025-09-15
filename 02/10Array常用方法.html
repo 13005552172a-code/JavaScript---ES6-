@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // find: 查找数组中符合条件的第一个元素, 找到返回该元素, 找不到返回undefined
+      // const arr = [
+      //   "red",
+      //   "blue",
+      //   "green",
+      //   "black",
+      //   "white",
+      //   "yellow",
+      //   "purple",
+      // ];
+      // const index = [`white`, `purple`];
+      // const s = arr.find((item) => item === `yellow`);
+      // console.log(s);
+      // const phone = [
+      //   {
+      //     name: "小米",
+      //     price: 1999,
+      //   },
+      //   {
+      //     name: "华为",
+      //     price: 2999,
+      //   },
+      //   {
+      //     name: "苹果",
+      //     price: 4999,
+      //   },
+      // ];
+      // // const s = phone.find(function (item) {
+      // //   return item.name === `苹果`;
+      // // });
+      // const s = phone.find((item) => item.name === `苹果`);
+      // console.log(s);
+
+      // every: 检测数组所有元素是否都符合条件, 都符合返回true, 否则返回false
+      const nums = [10, 20, 30, 40, 50, 60];
+      const flag = nums.every((item) => item > 8);
+      console.log(flag);
+    </script>
+  </body>
+</html>

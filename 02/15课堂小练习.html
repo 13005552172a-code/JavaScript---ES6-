@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div></div>
+    <script>
+      // 首先先创建
+      const str = `50g的茶叶,清洗球`;
+      // 字符串转换为数组
+      // console.log(str.split(`,`));
+      // 数组遍历
+      // const new_str = str
+      //   .split(`,`)
+      //   .map(function (item) {
+      //     return `<span>【赠品】：${item}</span></br>`;
+      //   })
+      //   .join(``);
+      const new_str = str
+        .split(`,`)
+        .map((item) => `<span>【赠品】：${item}</span></br>`)
+        .join(``);
+      document.querySelector(`div`).innerHTML = new_str;
+    </script>
+  </body>
+</html>

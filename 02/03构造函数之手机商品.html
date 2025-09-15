@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Goods(name, price, count) {
+        this.name = name;
+        this.price = price;
+        this.count = count;
+      }
+      const g1 = new Goods(`小米`, 1999, 20);
+      const g2 = new Goods(`华为`, 3999, 59);
+      const g3 = new Goods(`vivo`, 1888, 100);
+      console.log(g1);
+      console.log(g2);
+      console.log(g3);
+    </script>
+  </body>
+</html>

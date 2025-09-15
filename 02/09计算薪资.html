@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const Person = [
+        { name: "张三", age: 18, salary: 3000 },
+        { name: "李四", age: 19, salary: 4000 },
+        { name: "王五", age: 20, salary: 5000 },
+        { name: "赵六", age: 21, salary: 6000 },
+        { name: "钱七", age: 22, salary: 7000 },
+      ];
+      const total = Person.reduce((pre, current) => {
+        return pre + current.salary;
+      }, 0);
+      console.log(total);
+    </script>
+  </body>
+</html>
