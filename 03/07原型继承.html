@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const person = {
+        eye: 2,
+        nose: 1,
+        face: 1,
+      };
+      function man() {}
+      // 继承person
+      man.prototype = person;
+      // 原型constructor属性指向构造函数
+      man.prototype.constructor = man;
+      const boy = new man();
+      console.log(boy);
+      console.log(man.prototype);
+
+      // function woman() {}
+      // woman.prototype = person;
+      // woman.prototype.constructor = woman;
+      // const womans = new woman();
+      // console.log(womans);
+      // console.log(woman.prototype);
+    </script>
+  </body>
+</html>

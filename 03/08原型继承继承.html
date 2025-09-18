@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 利用构造函数
+      //old
+      function person() {
+        this.eye = 2;
+        this.head = 1;
+        this.nose = 1;
+      }
+      function man() {}
+      // 继承原型
+      man.prototype = new person();
+      // 指向构造函数
+      man.prototype.constructor = man;
+      // 最后new一个
+      const person_man = new man();
+      console.log(person_man);
+      // console.log(person_man.eye);
+      function woman() {}
+      woman.prototype = new person();
+      woman.prototype.constructor = woman;
+      woman.prototype.serveral = function () {
+        console.log(`baby`);
+      };
+      const girl = new woman();
+      console.log(girl);
+      console.log(girl.serveral);
+    </script>
+  </body>
+</html>

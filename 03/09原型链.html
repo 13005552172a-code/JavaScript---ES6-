@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // const person = {
+      //   uname: `gwq`,
+      //   age: 18,
+      // };
+      function person() {}
+      function man() {}
+      man.prototype = person;
+      man.prototype.constructor = man;
+      const boy = new man();
+      console.log(boy);
+      console.log(boy instanceof man); //对象与构造函数之间的关系
+
+      // console.log(Object.prototype); //所有对象的基础原型
+      // console.log(Object.prototype.__proto__); //null 原型链的终点
+      // console.log(Object.constructor); //体现了函数与函数构造器的关系
+    </script>
+  </body>
+</html>
