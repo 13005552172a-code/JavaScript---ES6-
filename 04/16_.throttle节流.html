@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        font-size: 100px;
+        color: aqua;
+        text-align: center;
+        margin: 0 auto;
+        width: 500px;
+        height: 500px;
+        background-color: bisque;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box"></div>
+    <!-- lodash提供的防抖来处理 -->
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script>
+      const box = document.querySelector(`.box`);
+      let i = 0;
+      function mouseMove() {
+        box.innerHTML = i++;
+      }
+      // box.addEventListener(`mousemove`, mouseMove);
+      // 停了500ms后触发
+      box.addEventListener(`mousemove`, _.throttle(mouseMove, 500));
+    </script>
+    -->
+  </body>
+</html>

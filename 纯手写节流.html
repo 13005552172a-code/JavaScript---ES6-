@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        margin: 0 auto;
+        width: 500px;
+        height: 500px;
+        background-color: aqua;
+        text-align: center;
+        color: black;
+        font-size: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--  -->
+    <div class="box"></div>
+    <script>
+      // 手写节流
+      let i = 0;
+      const box = document.querySelector(`.box`);
+      function sc() {
+        box.innerHTML = ++i;
+      }
+      function fd(fn, t) {
+        let times = null;
+        return function () {
+          if (!times)
+            setTimeout(function () {
+              fn();
+              times = null;
+            }, t);
+        };
+      }
+      box.addEventListener(`mousemove`, fd(sc, 500));
+    </script>
+  </body>
+</html>
