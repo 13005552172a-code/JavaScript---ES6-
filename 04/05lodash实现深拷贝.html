@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 先引用 -->
+    <script src="./lodash.min.js"></script>
+    <script>
+      const student = {
+        name: `gwq`,
+        age: 20,
+        hobby: [`篮球`, `足球`, `乒乓球`],
+        family: {
+          baby: `小wq`,
+        },
+      };
+      const o = _.cloneDeep(student);
+      o.hobby[0] = `小黑子`;
+      console.log(o);
+      console.log(student);
+    </script>
+  </body>
+</html>

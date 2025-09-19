@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const person = {
+        name: `pink`,
+        age: 18,
+        family: {
+          baby: `小pink`,
+        },
+      };
+      // 会改变
+      // const o = person;
+      // o.age = 20;
+      // console.log(o);//20
+      // console.log(person);//20
+
+      // 浅拷贝(会改变表层的)
+      // const o = { ...person };
+      // o.age = 20;
+      // console.log(o);//20
+      // console.log(person);//18
+
+      // 在对象里面对象，也会改变
+      const o = {};
+      Object.assign(o, person);
+      o.age = 20;
+      // 修改对象里面的对象
+      o.family.baby = `Big pink`;
+      console.log(o); //Big pink
+      console.log(person); //Big pink
+    </script>
+  </body>
+</html>

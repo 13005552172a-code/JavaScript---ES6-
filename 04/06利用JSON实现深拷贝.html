@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const student = {
+        name: `gwq`,
+        age: 20,
+        hobby: [`篮球`, `足球`, `乒乓球`],
+        family: {
+          baby: `小wq`,
+        },
+      };
+      // 把对象转换为JSON字符串
+      // parse：转换为对象
+      const o = JSON.parse(JSON.stringify(student));
+      o.name = `lyw`;
+      o.family.baby = `old`;
+      console.log(o);
+      console.log(student);
+    </script>
+  </body>
+</html>

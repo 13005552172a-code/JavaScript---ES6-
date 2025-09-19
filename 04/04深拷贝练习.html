@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 创建对象
+      const student = {
+        name: `gwq`,
+        age: 20,
+        hobby: [`篮球`, `足球`, `乒乓球`],
+        family: {
+          baby: `小wq`,
+        },
+      };
+      //创建一个对象继承
+      const o = {};
+      function replay(newobj, oldobj) {
+        for (let i in oldobj) {
+          if (oldobj[i] instanceof Array) {
+            newobj[i] = [];
+            replay(newobj[i], oldobj[i]);
+          } else if (oldobj[i] instanceof Object) {
+            newobj[i] = {};
+            replay(newobj[i], oldobj[i]);
+          } else {
+            newobj[i] = oldobj[i];
+          }
+        }
+      }
+      replay(o, student);
+      o.hobby[1] = `排球`;
+      o.family.baby = `老wq`;
+      console.log(student);
+      console.log(o);
+    </script>
+  </body>
+</html>
